@@ -1,0 +1,62 @@
+<!-- 头部 start -->
+<script>
+    $(function () {
+        $.get("findUserServlet",{},function (data) {
+            var msg = "欢迎回来，"+data.real_name;
+            $("#span_username").html(msg);
+
+        });
+    });
+
+</script>
+
+    <header id="header">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" href="css/index.css">
+
+        <div class="top_banner">
+            <img src="images/top_banner.jpg" alt="" style="width: 1560px; height: 120px">
+        </div>
+
+        <div class="shortcut">
+            <!-- 未登录状态  -->
+            <div class="login_out">
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+                <a href="javascript:location.href='exitServlet';">退出</a>
+            </div>
+            <!-- 登录状态  -->
+            <div class="login">
+
+                <span id="span_username"></span>
+
+            </div>
+        </div>
+
+        <div class="header_wrap">
+            <div class="topbar" style="display:flex;">
+
+                <div class="logo" style="margin-left: 60px">
+                    <a href="/"><img src="images/logo.jpg" alt="" style="width: 60px; height: 60px"></a>
+                </div>
+
+                <div class="hottel" style="margin-left: 750px">
+                    <div class="hot_pic">
+                        <img src="images/hot_tel.jpg" alt="">
+                    </div>
+
+                    <div class="hot_tel">
+                        <p class="hot_time">客服时间(9:00-6:00)</p>
+                        <p class="hot_num">客服热线:0530-2311612</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- 头部 end -->
+
+    
